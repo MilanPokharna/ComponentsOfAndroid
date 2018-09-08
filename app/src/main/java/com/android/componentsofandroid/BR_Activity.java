@@ -29,4 +29,8 @@ public class BR_Activity extends AppCompatActivity {
         Intent i = new Intent(this,MyService.class);
         stopService(i);
     }
+
+    public void doSomething(View view) {
+
+    }
 }
