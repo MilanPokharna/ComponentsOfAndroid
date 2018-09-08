@@ -1,6 +1,9 @@
 package com.android.componentsofandroid;
 
+import android.app.PendingIntent;
 import android.content.Intent;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,6 +34,16 @@ public class BR_Activity extends AppCompatActivity {
     }
 
     public void doSomething(View view) {
+        NotificationManagerCompat myManager = NotificationManagerCompat.from(this);
+        NotificationCompat.Builder noti = new NotificationCompat.Builder(this);
+        noti.setAutoCancel(true);
+        noti.setContentTitle("1 new message");
+        noti.setContentText("hey how are you?");
 
+        Intent i = new Intent(this,BR_Activity.class);
+        PendingIntent pd = PendingIntent.getActivity(this,1,i,0);
+
+        noti.setContentIntent(pd);
+        myManager.notify(1,noti.build());
     }
 }
