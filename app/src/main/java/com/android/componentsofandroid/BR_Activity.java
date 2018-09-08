@@ -39,6 +39,7 @@ public class BR_Activity extends AppCompatActivity {
         noti.setAutoCancel(true);
         noti.setContentTitle("1 new message");
         noti.setContentText("hey how are you?");
+        noti.setSmallIcon(android.R.drawable.ic_btn_speak_now);
 
         Intent i = new Intent(this,BR_Activity.class);
         PendingIntent pd = PendingIntent.getActivity(this,1,i,0);
