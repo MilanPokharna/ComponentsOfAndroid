@@ -8,6 +8,7 @@ import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class BR_Activity extends AppCompatActivity {
     AlarmManager alarmManager;
@@ -52,12 +53,13 @@ public class BR_Activity extends AppCompatActivity {
     }
 
     public void startAlarm(View view) {
+        Toast.makeText(this, "Alarm Started", Toast.LENGTH_SHORT).show();
         Intent i = new Intent();
         i.setAction("my.own.reciever.message");
         i.addCategory("android.intent.category.DEFAULT");
         PendingIntent pd = PendingIntent.getBroadcast(this,0,i,0);
 
-        alarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,System.currentTimeMillis(),30*1000,pd);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,System.currentTimeMillis(),3*1000,pd);
 
     }
 
@@ -68,6 +70,7 @@ public class BR_Activity extends AppCompatActivity {
         PendingIntent pd = PendingIntent.getBroadcast(this,0,i,0);
 
         alarmManager.cancel(pd);
+        Toast.makeText(this, "Alarm Stopped", Toast.LENGTH_SHORT).show();
 
     }
 }

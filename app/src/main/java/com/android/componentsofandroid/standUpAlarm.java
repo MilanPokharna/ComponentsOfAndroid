@@ -6,11 +6,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
+import android.widget.Toast;
 
 public class standUpAlarm extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
+        Toast.makeText(context, "inside Reciever", Toast.LENGTH_SHORT).show();
         NotificationManagerCompat mymanager = NotificationManagerCompat.from(context);
         NotificationCompat.Builder mynoti = new NotificationCompat.Builder(context);
         mynoti.setSmallIcon(android.R.drawable.ic_btn_speak_now);
