@@ -1,5 +1,6 @@
 package com.android.componentsofandroid;
 
+import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class BR_Activity extends AppCompatActivity {
+    AlarmManager alarmManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
