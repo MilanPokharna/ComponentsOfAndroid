@@ -52,10 +52,22 @@ public class BR_Activity extends AppCompatActivity {
     }
 
     public void startAlarm(View view) {
+        Intent i = new Intent();
+        i.setAction("my.own.reciever.message");
+        i.addCategory("android.intent.category.DEFAULT");
+        PendingIntent pd = PendingIntent.getBroadcast(this,0,i,0);
+
+        alarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,System.currentTimeMillis(),30*1000,pd);
 
     }
 
     public void stopAlarm(View view) {
+        Intent i = new Intent();
+        i.setAction("my.own.reciever.message");
+        i.addCategory("android.intent.category.DEFAULT");
+        PendingIntent pd = PendingIntent.getBroadcast(this,0,i,0);
+
+        alarmManager.cancel(pd);
 
     }
 }
