@@ -10,7 +10,7 @@
     android:id="@+id/text"
     android:layout_centerHorizontal="true"
     android:text="Broadcast Reciever"
-    android:textSize="32sp"
+    android:textSize="24sp"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" />
 <Button
@@ -29,7 +29,7 @@
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
         android:text="Services Demo"
-        android:textSize="32sp"
+        android:textSize="24sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <Button
@@ -56,7 +56,7 @@
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
         android:text="Notification Demo"
-        android:textSize="32sp"
+        android:textSize="24sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <Button
@@ -74,7 +74,7 @@
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
         android:text="Alarm Demo"
-        android:textSize="32sp"
+        android:textSize="24sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <Button
