@@ -19,7 +19,7 @@ public class standUpAlarm extends BroadcastReceiver {
         mynoti.setContentTitle("StandUp Notification");
         mynoti.setContentText("AlarmStarted Please Stand up");
 
-        Intent i = new Intent(context,BR_Activity.class);
+        Intent i = new Intent(context,StandUpActivity.class);
         PendingIntent pd = PendingIntent.getActivity(context,0,i,0);
 
         mynoti.setContentIntent(pd);
