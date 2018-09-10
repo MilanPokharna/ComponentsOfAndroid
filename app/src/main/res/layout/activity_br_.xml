@@ -62,7 +62,7 @@
     <Button
         android:layout_below="@id/text3"
         android:text="Open Notification"
-        android:onClick="doSomething"
+        android:onClick="openNotification"
         android:id="@+id/open"
         android:layout_marginTop="8dp"
         android:layout_centerHorizontal="true"
@@ -80,7 +80,7 @@
     <Button
         android:layout_below="@id/text4"
         android:text="Start Alarm"
-        android:onClick="startsomething"
+        android:onClick="startAlarm"
         android:id="@+id/startalarm"
         android:layout_marginTop="8dp"
         android:layout_centerHorizontal="true"
@@ -89,7 +89,7 @@
     <Button
         android:layout_below="@id/startalarm"
         android:text="Stop  Alarm"
-        android:onClick="stopsomething"
+        android:onClick="stopAlarm"
         android:id="@+id/stopalarm"
         android:layout_marginTop="8dp"
         android:layout_centerHorizontal="true"

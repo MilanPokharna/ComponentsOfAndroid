@@ -33,7 +33,7 @@ public class BR_Activity extends AppCompatActivity {
         stopService(i);
     }
 
-    public void doSomething(View view) {
+    public void openNotification(View view) {
         NotificationManagerCompat myManager = NotificationManagerCompat.from(this);
         NotificationCompat.Builder noti = new NotificationCompat.Builder(this);
         noti.setAutoCancel(true);
@@ -46,5 +46,13 @@ public class BR_Activity extends AppCompatActivity {
 
         noti.setContentIntent(pd);
         myManager.notify(1,noti.build());
+    }
+
+    public void startAlarm(View view) {
+
+    }
+
+    public void stopAlarm(View view) {
+
     }
 }
