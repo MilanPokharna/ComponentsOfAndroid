@@ -47,9 +47,16 @@
         <receiver
             android:name=".standUpAlarm"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="my.own.reciever.message"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
 
-        <activity android:name=".StandUpActivity"></activity>
+        <activity android:name=".StandUpActivity">
+
+        </activity>
     </application>
 
 </manifest>
