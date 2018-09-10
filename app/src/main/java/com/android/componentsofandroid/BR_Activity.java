@@ -16,6 +16,7 @@ public class BR_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_br_);
+        alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
     }
 
     public void click(View view) {
