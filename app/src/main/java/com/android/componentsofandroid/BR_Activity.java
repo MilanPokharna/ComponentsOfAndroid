@@ -68,7 +68,6 @@ public class BR_Activity extends AppCompatActivity {
         i.setAction("my.own.reciever.message");
         i.addCategory("android.intent.category.DEFAULT");
         PendingIntent pd = PendingIntent.getBroadcast(this,0,i,0);
-
         alarmManager.cancel(pd);
         Toast.makeText(this, "Alarm Stopped", Toast.LENGTH_SHORT).show();
 
